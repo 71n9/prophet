@@ -20,6 +20,8 @@ JAVASCRIPT AST HOOK <br>
   
   ![image](https://user-images.githubusercontent.com/44369205/170855448-3cee7ee9-765c-4a28-a2cc-8cd6d27f8fee.png)
    #### 浏览器挂上代理端口8001，打开网站等待加载完成,
+   ![image](https://user-images.githubusercontent.com/44369205/170857331-5f4c23eb-75d2-4834-ab41-897b344bc0e7.png)
+
   ![138J1B5VMOH399(~3ET~ @J](https://user-images.githubusercontent.com/44369205/170857154-5f252ec8-6c2f-4bb8-983b-073c5cdd4178.png)
 
    #### 搜索参数值,ting_search(str) ,点击跳转到相应位置
