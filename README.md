@@ -14,7 +14,7 @@ JAVASCRIPT AST HOOK JS逆向快速定位 <br>
   #### 需要安装的依赖库一共6个分别是 anyproxy  cheerio @babel/parser @babel/traverse @babel/types @babel/generator
   
 ### 第三步:启动+使用
-  #### 打开server.js文件 设置参数主要有 port(代理端口) throttle（传输速度）一般默认无须修改
+  #### 打开server.js文件 设置参数主要有 port(代理端口) throttle（传输速度）一般默认无须修改 详细查看anyoroxy官方地址anyoroxy.io里面例子通俗易懂
   #### 直接命令启动  node .\server.js 下面是启动成功的输出信息 Http proxy started on port 8001
  
   
@@ -33,4 +33,4 @@ JAVASCRIPT AST HOOK JS逆向快速定位 <br>
 
 ## 本人是个js逆向安全小白5月开始接触学习逆向，欢迎交流讨论共同进步，最好有大佬带带我。
 ## 做这个项目原因是从别人那里了解到github上的ast-hook-for-js-RE内存漫游工具用了一下觉得ast语法树挺强的，所以自己也从0学起来了。
-## 这个小项目是从0开始学ast语法树，边学边写边查短时间内写出来的东西，肯定还有很多bug，有更好的想法和意见欢迎提出，希望让它越来越完善，能力越来越强大。
+## 这个小项目是从0开始学ast语法树，边学，边写，边查，短时间内写出来的东西，肯定还有很多bug，有更好的想法和意见欢迎提出，希望让它越来越完善，能力越来越强大。
