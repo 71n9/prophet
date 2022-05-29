@@ -1,6 +1,6 @@
 # prophet
 
-JAVASCRIPT AST HOOK <br>
+JAVASCRIPT AST HOOK JS逆向快速定位 <br>
 
 ### 这个项目是用AST语法树进行改写JavaScript代码,实现快速定位相关代码。核心逻辑查看源代码handleCode.js <br>
 
