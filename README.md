@@ -14,7 +14,7 @@ JAVASCRIPT AST HOOK JS逆向快速定位 <br>
   #### 需要安装的依赖库一共6个分别是 anyproxy  cheerio @babel/parser @babel/traverse @babel/types @babel/generator
   
 ### 第三步:启动+使用
-  #### 打开server.js文件 设置参数主要有 port(代理端口) throttle（传输速度）一般默认无须修改 详细查看anyoroxy官方地址anyoroxy.io里面例子通俗易懂
+  #### 打开server.js文件 设置参数主要有 port(代理端口) throttle（传输速度）一般默认无须修改  anyoroxy安装遇到坑查百度一般都能解决，详细查看官方地址anyoroxy.io里面例子通俗易懂
   #### 直接命令启动  node .\server.js 下面是启动成功的输出信息 Http proxy started on port 8001
  
   
