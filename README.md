@@ -26,3 +26,7 @@ JAVASCRIPT AST HOOK <br>
 
    #### 搜索参数值,ting_search(str) ,点击跳转到相应位置
   ![image](https://user-images.githubusercontent.com/44369205/170857206-10b86214-42db-4122-883c-d34cb9525a68.png)
+
+
+## 本人是个js逆向安全小白5月开始接触学习逆向，欢迎交流讨论共同进步，最好有大佬带带我。
+## 此项目是从0开始学ast，边学边写边查短时间内完成(3天)，肯定还有很多bug，有更好的想法和意见欢迎提出，希望让它的能力越来越强大。
