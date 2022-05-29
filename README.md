@@ -2,7 +2,7 @@
 
 JAVASCRIPT AST HOOK JS逆向快速定位 <br>
 
-### 这个项目是用AST语法树进行改写JavaScript代码,实现快速定位相关代码。核心逻辑查看源代码handleCode.js <br>
+### 这个项目是用AST语法树进行改写JavaScript代码,实现hook保存return值等等,以达到快速定位,指定参数值的相关代码位置。核心逻辑代码查看handleCode.js <br>
 
 # 使用方法
 
