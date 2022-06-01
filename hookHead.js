@@ -7,30 +7,37 @@ if (!window.MyDb) {
 
 if(!window.ting_hook||!window.ting_search){
 
-    function ting_hook(s, n,functionType) {
+    function ting_hook(s, n,functionType ) {
 
-    if (typeof s !== "string") {
+        if (typeof s !== "string") {
+            return s
+        }
+
+        if (n==3){
+
+
+            console.log("解析:",functionType,"内容")
+            xhr = new window.MyXhr()
+            xhr.open("POST", "/handleJsCode", false);
+            xhr.send(s);
+            let res = xhr.responseText
+
+            return res
+        }
+
+        let _ting_obj = {};
+        Error.captureStackTrace(_ting_obj);
+        let _stack = _ting_obj.stack.split("\n")[n];
+
+        if (functionType!="eval" && "大Function"){
+              _stack = "源代码:"+functionType+" "+_stack;
+        }
+
+
+
+        window.MyDb[s]instanceof Array ? window.MyDb[s].push(_stack) : window.MyDb[s] = Array(_stack);
         return s
     }
-
-    if (n==3){
-
-
-        console.log("解析:",functionType,"内容")
-        xhr = new window.MyXhr()
-        xhr.open("POST", "/handleJsCode", false);
-        xhr.send(s);
-        let res = xhr.responseText
-
-        return res
-    }
-
-    let _ting_obj = {};
-    Error.captureStackTrace(_ting_obj);
-    let _stack = _ting_obj.stack.split("\n")[n];
-    window.MyDb[s]instanceof Array ? window.MyDb[s].push(_stack) : window.MyDb[s] = Array(_stack);
-    return s
-}
     function ting_search(res) {
         let arr = window.MyDb[res];
 
@@ -39,10 +46,11 @@ if(!window.ting_hook||!window.ting_search){
             for (let i = 0; i < arr.length; i++) {
 
                 if (arr[i]){
-                    let jsPath = arr[i].split(":")
-
-                    jsPath.pop()
-                    jsPath = jsPath.join(":")
+                    let jsPath = arr[i]
+//                    let jsPath = arr[i].split(":")
+//
+//                    jsPath.pop()
+//                    jsPath = jsPath.join(":")
 
                     d[jsPath]? d[jsPath]+=1: d[jsPath]=1
                 }else{

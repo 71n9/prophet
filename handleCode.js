@@ -58,7 +58,7 @@ function handleJsCode(jsCode,noHead){
         // hook return 值
         ,ReturnStatement(path) {
             if (path.node.argument != null){
-                path.node.argument = t.CallExpression(t.Identifier("window.ting_hook"),[path.node.argument,t.NumericLiteral(2)])
+                path.node.argument = t.CallExpression(t.Identifier("window.ting_hook"),[path.node.argument,t.NumericLiteral(2),t.StringLiteral(path.toString().substring(0,100))])
             }
 
         }
@@ -66,7 +66,7 @@ function handleJsCode(jsCode,noHead){
         // hook 赋值
         ,AssignmentExpression(path){
             if(path.node.operator=="="){
-                path.node.right = t.CallExpression(t.Identifier("window.ting_hook"),[path.node.right,t.NumericLiteral(2)])
+                path.node.right = t.CallExpression(t.Identifier("window.ting_hook"),[path.node.right,t.NumericLiteral(2),t.StringLiteral(path.toString().substring(0,100))])
 
             }
         }
@@ -74,7 +74,7 @@ function handleJsCode(jsCode,noHead){
         // hook 声明定义 值
         ,VariableDeclarator(path){
             if(path.node.init !=null){
-                path.node.init = t.CallExpression(t.Identifier("window.ting_hook"),[path.node.init,t.NumericLiteral(2)])
+                path.node.init = t.CallExpression(t.Identifier("window.ting_hook"),[path.node.init,t.NumericLiteral(2),t.StringLiteral(path.toString().substring(0,100))])
 
             }
         }
@@ -83,7 +83,7 @@ function handleJsCode(jsCode,noHead){
         ,ObjectExpression(path){
 			for(let i=0;i<path.node.properties.length;i++){
               	if (path.node.properties[i].type !="ObjectMethod"){
-              	    path.node.properties[i].value = t.CallExpression(t.Identifier("window.ting_hook"),[path.node.properties[i].value,t.NumericLiteral(2)])
+              	    path.node.properties[i].value = t.CallExpression(t.Identifier("window.ting_hook"),[path.node.properties[i].value,t.NumericLiteral(2),t.StringLiteral(path.toString().substring(0,100))])
               	}
 
 
