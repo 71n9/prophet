@@ -1,5 +1,8 @@
 const AnyProxy = require('anyproxy');
 
+
+
+
 const options = {
   port: 8001,
   rule: require('./myRuleModule'),
@@ -9,7 +12,7 @@ const options = {
   },
   throttle: 50000,
   forceProxyHttps: true,
-  wsIntercept:false, // 不开启websocket代理
+  wsIntercept: false, // 不开启websocket代理
   silent: false
 };
 const proxyServer = new AnyProxy.ProxyServer(options);
